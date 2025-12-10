@@ -87,3 +87,18 @@ h1{
   transition:opacity .2s;
 }
 .nav-bar a:hover{opacity:.8;}
+/* 让整个卡片可点击 */
+a.card-link {
+    text-decoration: none;
+    color: inherit;
+    flex: 1 1 30%;          /* 保持跟 .card 同样宽度 */
+}
+/* ===== 点击手感 ===== */
+.card {
+    transition: transform .15s cubic-bezier(.4,0,.2,1), box-shadow .15s;
+    cursor: pointer;
+}
+.card:active {
+    transform: scale(.96);          /* 按下轻微缩小 */
+    box-shadow: 0 2px 8px rgba(0,0,0,.2); /* 阴影变浅 */
+}
